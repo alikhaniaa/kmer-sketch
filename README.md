@@ -1,15 +1,15 @@
 # kmer-sketch
 
-A small Rust command-line tool for k-mer work on bacterial reads, written as a
+A small Rust command-line tool for k-mer work on sequencing reads, written as a
 learning project. It counts canonical k-mers, builds FracMinHash sketches,
-compares sketches (Jaccard, containment, Mash distance), simulates
-single-cell read sets from reference genomes, and clusters the simulated
-cells to see whether species can be recovered from k-mer sketches alone.
+compares sketches (Jaccard, containment, Mash distance), simulates read sets
+from reference genomes, and clusters them to see whether species can be
+recovered from k-mer sketches alone.
 
-The single-cell part is a toy version of one step of a microbial single-cell
-pipeline: every "cell" is a FASTQ file of reads from one genome, with its own
-coverage, and the goal is to group cells by species from k-mer sketches
-without assembly.
+To have something to test against, `simulate` turns each reference genome into
+many small read sets ("cells": a FASTQ file of reads from one genome, each
+with its own coverage), and the clustering step tries to group them by species
+from sketches without assembly.
 
 ## Build and run
 
