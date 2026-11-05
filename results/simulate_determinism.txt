@@ -1,0 +1,1 @@
+same-seed outputs after the ReadSource change: 41/41 files of the 40-cell pipeline run (40 FASTQ + cells.tsv) and the 50x read set are byte-identical (md5) to the earlier runs

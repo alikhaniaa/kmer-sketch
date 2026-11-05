@@ -1,0 +1,7 @@
+name	exact_kmers	python_hashes	rust_hashes	identical
+ecoli__cell001	5973992	5983	5983	True
+ecoli__cell005	5681833	5632	5632	True
+ecoli__cell009	3956163	3967	3967	True
+ecoli__cell013	5011052	5044	5044	True
+saureus__cell003	3447409	3562	3562	True
+saureus__cell007	4066499	4058	4058	True

@@ -1,0 +1,11 @@
+input	tool	threads	median_wall_s	min_wall_s	max_wall_s	median_peak_rss_mb
+genome	rust	1	1.15	1.11	1.18	219
+genome	rust	2	0.98	0.96	1.01	205
+genome	rust	4	0.87	0.85	0.90	208
+genome	rust	8	0.87	0.85	0.88	233
+genome	python	1	10.23	10.14	10.28	464
+reads50x	rust	1	7.17	7.11	7.23	425
+reads50x	rust	2	4.69	4.68	4.89	426
+reads50x	rust	4	3.68	3.57	3.68	430
+reads50x	rust	8	3.61	3.42	3.64	434
+reads50x	python	1	125.07	125.01	125.98	898

@@ -1,0 +1,34 @@
+[package]
+name = "kmer-sketch"
+version = "0.1.0"
+edition = "2021"
+# Oldest toolchain checked: `cargo +1.88 test --locked` passes (proptest needs 1.88).
+rust-version = "1.88"
+description = "Canonical k-mer counting, FracMinHash sketching and toy single-cell clustering for bacterial reads"
+license = "MIT"
+authors = ["Alireza Alikhani"]
+readme = "README.md"
+
+[[bin]]
+name = "kmer-sketch"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+flate2 = "1"
+needletail = { version = "0.7", default-features = false, features = ["flate2"] }
+rand = "0.9"
+rayon = "1"
+rustc-hash = "2"
+
+[dev-dependencies]
+assert_cmd = "2"
+predicates = "3"
+proptest = "1"
+tempfile = "3"
+
+[profile.release]
+# One codegen unit and thin LTO: slightly faster binaries for the benchmarks.
+codegen-units = 1
+lto = "thin"

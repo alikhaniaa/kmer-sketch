@@ -1,0 +1,6 @@
+# cells=40 clusters=4 labels=4 ARI=1.0000 purity=1.0000 species_recovered=4/4
+cluster	size	majority	purity	composition
+0	10	bsubtilis	1.0000	bsubtilis:10
+1	10	ecoli	1.0000	ecoli:10
+2	10	paeruginosa	1.0000	paeruginosa:10
+3	10	saureus	1.0000	saureus:10

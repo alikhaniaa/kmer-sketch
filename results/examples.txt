@@ -1,0 +1,59 @@
+$ target/release/kmer-sketch count -k 21 --min-count 20 -o data/examples/ecoli_min20.tsv data/genomes/ecoli.fna
+
+$ head -n 4 data/examples/ecoli_min20.tsv
+kmer	count
+AAACGCCTTATCCGGCCTACA	21
+AACGCCTTATCCGGCCTACAA	45
+AACGCCTTATCCGGCCTACGG	25
+
+$ wc -l < data/examples/ecoli_min20.tsv
+64
+
+$ target/release/kmer-sketch sketch -k 21 --scaled 1000 -o data/examples/genome_sketches data/genomes/*.fna
+wrote 4 sketches to data/examples/genome_sketches
+
+$ head -n 9 data/examples/genome_sketches/ecoli.sketch
+# kmer-sketch FracMinHash v1
+name	ecoli
+ksize	21
+scaled	1000
+hash	splitmix64
+count	4583
+hashes
+348139822534
+3829463084548
+
+$ target/release/kmer-sketch compare --metric jaccard data/examples/genome_sketches/*.sketch
+name	bsubtilis	ecoli	paeruginosa	saureus
+bsubtilis	1.000000	0.000000	0.000096	0.000000
+ecoli	0.000000	1.000000	0.000556	0.000000
+paeruginosa	0.000096	0.000556	1.000000	0.000000
+saureus	0.000000	0.000000	0.000000	1.000000
+
+$ target/release/kmer-sketch compare --metric distance data/examples/genome_sketches/*.sketch
+name	bsubtilis	ecoli	paeruginosa	saureus
+bsubtilis	0.000000	1.000000	0.407357	1.000000
+ecoli	1.000000	0.000000	0.323871	1.000000
+paeruginosa	0.407357	0.323871	0.000000	1.000000
+saureus	1.000000	1.000000	1.000000	0.000000
+
+$ target/release/kmer-sketch compare --metric containment data/examples/genome_sketches/ecoli.sketch data/examples/genome_sketches/paeruginosa.sketch
+name	ecoli	paeruginosa
+ecoli	1.000000	0.001309
+paeruginosa	0.000967	1.000000
+
+$ head -n 5 data/pipeline/cells/cells.tsv
+file	species	coverage	reads
+bsubtilis__cell000.fastq	bsubtilis	16.744	470563
+ecoli__cell001.fastq	ecoli	17.196	532128
+paeruginosa__cell002.fastq	paeruginosa	19.821	827779
+saureus__cell003.fastq	saureus	13.365	251388
+
+$ target/release/kmer-sketch cluster --threshold 0.1 results/pipeline/jaccard.tsv
+# cells=40 clusters=4 labels=4 ARI=1.0000 purity=1.0000 species_recovered=4/4
+cluster	size	majority	purity	composition
+0	10	bsubtilis	1.0000	bsubtilis:10
+1	10	ecoli	1.0000	ecoli:10
+2	10	paeruginosa	1.0000	paeruginosa:10
+3	10	saureus	1.0000	saureus:10
+

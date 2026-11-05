@@ -1,0 +1,4 @@
+genome	true_rate	mash_distance_scaled100	mash_distance_scaled1000
+ecolimut0.001	0.000999	0.000993	0.001013
+ecolimut0.01	0.009877	0.009979	0.009951
+ecolimut0.05	0.050007	0.051248	0.049056

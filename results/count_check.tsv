@@ -1,0 +1,11 @@
+input	output	lines	md5	identical_to_python
+genome	genome.python.t1.tsv	4543892	93b5a2668c00489ddb72256cb902c17c	yes
+genome	genome.rust.t1.tsv	4543892	93b5a2668c00489ddb72256cb902c17c	yes
+genome	genome.rust.t2.tsv	4543892	93b5a2668c00489ddb72256cb902c17c	yes
+genome	genome.rust.t4.tsv	4543892	93b5a2668c00489ddb72256cb902c17c	yes
+genome	genome.rust.t8.tsv	4543892	93b5a2668c00489ddb72256cb902c17c	yes
+reads50x	reads50x.python.t1.tsv	8697835	dea20cd30d101411b4286df7c7c9ca49	yes
+reads50x	reads50x.rust.t1.tsv	8697835	dea20cd30d101411b4286df7c7c9ca49	yes
+reads50x	reads50x.rust.t2.tsv	8697835	dea20cd30d101411b4286df7c7c9ca49	yes
+reads50x	reads50x.rust.t4.tsv	8697835	dea20cd30d101411b4286df7c7c9ca49	yes
+reads50x	reads50x.rust.t8.tsv	8697835	dea20cd30d101411b4286df7c7c9ca49	yes

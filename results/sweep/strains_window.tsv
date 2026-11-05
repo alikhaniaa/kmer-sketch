@@ -1,0 +1,5 @@
+setting	scaled	metric	first_t_ARI1	last_t_ARI1
+strains_cov2-30_err0.001	100	containment	0.78	0.87
+strains_cov2-30_err0.001	100	jaccard	0.52	0.55
+strains_cov2-30_err0.001	1000	containment	0.79	0.87
+strains_cov2-30_err0.001	1000	jaccard	0.52	0.56

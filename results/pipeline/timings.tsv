@@ -1,0 +1,6 @@
+step	wall_s
+simulate	33.13
+sketch	2.85
+compare_jaccard	0.02
+compare_containment	0.02
+compare_distance	0.02

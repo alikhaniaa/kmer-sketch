@@ -1,0 +1,6 @@
+name	exact_kmers	python_hashes	rust_hashes	identical
+bsubtilis	4160054	4175	4175	True
+ecoli	4543891	4583	4583	True
+ecolimut0.001	4545909	4588	4588	True
+ecolimut0.01	4567386	4670	4670	True
+ecolimut0.05	4620280	4679	4679	True
