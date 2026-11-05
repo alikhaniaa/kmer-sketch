@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 # Oldest toolchain checked: `cargo +1.88 test --locked` passes (proptest needs 1.88).
 rust-version = "1.88"
-description = "Canonical k-mer counting, FracMinHash sketching and toy single-cell clustering for bacterial reads"
+description = "Canonical k-mer counting, FracMinHash sketching and sketch clustering for sequencing reads"
 license = "MIT"
 authors = ["Alireza Alikhani"]
 readme = "README.md"
