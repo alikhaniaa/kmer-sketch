@@ -134,7 +134,7 @@ Python FracMinHash for 6 cells and 5 genomes. Sketch Jaccard is within 0.0136
 of exact Jaccard for cell pairs at scaled=1000, and within 0.0010 for E. coli
 vs mutated copies at scaled=100. Mash distance to copies with 0.0999%,
 0.9877% and 5.0007% substitutions is 0.000993, 0.009979 and 0.051248
-(scaled=100). All CI checks pass (`results/quality.txt`).
+(scaled=100). Formatting, clippy (`-D warnings`) and all 60 tests pass in a local run of the same checks as CI (`results/quality.txt`).
 
 **Speed of `count`** (k=21, median of 3 runs, including writing the sorted
 TSV; `results/bench_summary.tsv`):
