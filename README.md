@@ -1,5 +1,9 @@
 # kmer-sketch
 
+[![CI](https://github.com/alikhaniaa/kmer-sketch/actions/workflows/ci.yml/badge.svg)](https://github.com/alikhaniaa/kmer-sketch/actions/workflows/ci.yml)
+
+Started in November 2026 as my first Rust project; I am still extending it.
+
 A small Rust command-line tool for k-mer work on sequencing reads, written as a
 learning project. It counts canonical k-mers, builds FracMinHash sketches,
 compares sketches (Jaccard, containment, Mash distance), simulates read sets

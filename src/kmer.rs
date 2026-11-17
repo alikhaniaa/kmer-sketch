@@ -238,6 +238,19 @@ mod tests {
     }
 
     #[test]
+    fn worked_example_integer_values() {
+        // ACG = 00 01 10 = 6; its reverse complement CGT = 01 10 11 = 27.
+        let acg = encode(b"ACG").unwrap();
+        assert_eq!(acg, 6);
+        assert_eq!(reverse_complement(acg, 3), 27);
+        assert_eq!(canonical(27, 3), 6);
+        // ACGT is its own reverse complement, so it is already canonical.
+        let acgt = encode(b"ACGT").unwrap();
+        assert_eq!(reverse_complement(acgt, 4), acgt);
+        assert_eq!(canonical(acgt, 4), acgt);
+    }
+
+    #[test]
     fn check_k_rejects_bad_values() {
         assert!(check_k(0).is_err());
         assert!(check_k(32).is_err());
